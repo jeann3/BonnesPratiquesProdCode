@@ -94,4 +94,7 @@ public class TargetEntity {
     public void setTelephoneEntities(Set<TelephoneEntity> telephoneEntities) {
         this.telephoneEntities = telephoneEntities;
     }
+
+
+
 }

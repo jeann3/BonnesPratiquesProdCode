@@ -7,6 +7,7 @@ import org.sam.mines.address.service.TelephoneEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -44,5 +45,15 @@ public class TelephoneEntityServiceImpl implements TelephoneEntityService {
     @Override
     public List<TargetEntity> findAllTargetsByTelephonePrefix(String prefix) {
         return repository.findAllTargetsByTelephonePrefix(prefix);
+    }
+
+    @Override
+    public Optional<TelephoneEntity> get(UUID id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public Collection<TelephoneEntity> getAll() {
+        return repository.findAll();
     }
 }

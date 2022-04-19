@@ -1,4 +1,4 @@
-package org.sam.mines.address.model;
+package org.sam.mines.address.persistence;
 
 import org.sam.mines.address.model.MailAddressEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
