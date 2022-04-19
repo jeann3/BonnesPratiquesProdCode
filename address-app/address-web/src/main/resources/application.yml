@@ -15,7 +15,7 @@ spring:
         persistence:
           schema-generation:
             database:
-              action: update
+              action: create
 
 
 logging:

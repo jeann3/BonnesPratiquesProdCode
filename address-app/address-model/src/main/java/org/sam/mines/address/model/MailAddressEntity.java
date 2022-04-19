@@ -4,7 +4,6 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -53,5 +52,49 @@ public class MailAddressEntity {
 
     public void setTarget(TargetEntity target) {
         this.target = target;
+    }
+
+
+    public static final class MailAddressEntityBuilder {
+        private UUID id;
+        private String localPart;
+        private String serverPart;
+        private TargetEntity target;
+
+        private MailAddressEntityBuilder() {
+        }
+
+        public static MailAddressEntityBuilder aMailAddressEntity() {
+            return new MailAddressEntityBuilder();
+        }
+
+        public MailAddressEntityBuilder withId(UUID id) {
+            this.id = id;
+            return this;
+        }
+
+        public MailAddressEntityBuilder withLocalPart(String localPart) {
+            this.localPart = localPart;
+            return this;
+        }
+
+        public MailAddressEntityBuilder withServerPart(String serverPart) {
+            this.serverPart = serverPart;
+            return this;
+        }
+
+        public MailAddressEntityBuilder withTarget(TargetEntity target) {
+            this.target = target;
+            return this;
+        }
+
+        public MailAddressEntity build() {
+            MailAddressEntity mailAddressEntity = new MailAddressEntity();
+            mailAddressEntity.setId(id);
+            mailAddressEntity.setLocalPart(localPart);
+            mailAddressEntity.setServerPart(serverPart);
+            mailAddressEntity.setTarget(target);
+            return mailAddressEntity;
+        }
     }
 }
