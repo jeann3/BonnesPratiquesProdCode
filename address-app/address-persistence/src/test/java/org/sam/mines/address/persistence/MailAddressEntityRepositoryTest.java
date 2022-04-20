@@ -34,10 +34,10 @@ class MailAddressEntityRepositoryTest {
         assertEquals(1, all.size());
     }
 
-    @Test
-    public void shouldFindByLocalPartAndServerPart(){
-        MailAddressEntity mailAddress = mailAddressEntityRepository.findByLocalPartAndServerPart("alexandre.bompuis", "mines-ales.org");
-        assertNotNull(mailAddress);
-    }
+//    @Test
+//    public void shouldFindByLocalPartAndServerPart(){
+//        MailAddressEntity mailAddress = mailAddressEntityRepository.findByLocalPartAndServerPart("alexandre.bompuis", "mines-ales.org");
+//        assertNotNull(mailAddress);
+//    }
 
 }

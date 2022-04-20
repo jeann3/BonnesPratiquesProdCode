@@ -28,12 +28,12 @@ services:
       - SONARQUBE_JDBC_USERNAME=mines
       - SONARQUBE_JDBC_PASSWORD=mines
 
-  jenkins:
-    image: jenkins
-    volumes:
-    - /home/sam/IdeaProjects/mines2021:/var/jenkins_home/workspace/mines
-    - /home/sam/.sdkman/candidates/java/current:/usr/share/java16
-    environment:
-      - JAVA_HOME=/usr/share/java16
-    ports:
-      - "8081:8080"
+#  jenkins:
+#    image: jenkins
+#    volumes:
+#    - /home/sam/IdeaProjects/mines2021:/var/jenkins_home/workspace/mines
+#    - /home/sam/.sdkman/candidates/java/current:/usr/share/java16
+#    environment:
+#      - JAVA_HOME=/usr/share/java16
+#    ports:
+#      - "8081:8080"
