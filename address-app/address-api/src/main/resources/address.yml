@@ -207,11 +207,8 @@ components:
       required:
         - prefix
         - number
-        - target
       properties:
         prefix:
           type: string
         number:
-          type: string
-        target:
           type: string

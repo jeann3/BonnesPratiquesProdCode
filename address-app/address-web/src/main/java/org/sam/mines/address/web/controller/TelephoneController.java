@@ -52,7 +52,6 @@ public class TelephoneController implements TelephoneApi {
         return TelephoneEntity.TelephoneEntityBuilder.aTelephoneEntity()
                 .withNumber(telephone.getNumber())
                 .withTarget(TargetEntityBuilder.aTargetEntity()
-                        .withName(telephone.getTarget())
                         .build())
                 .withPrefix(telephone.getPrefix())
                 .build();
@@ -62,7 +61,6 @@ public class TelephoneController implements TelephoneApi {
 
         Telephone telephone = new Telephone();
         telephone.setNumber(tel.getNumber());
-        telephone.setTarget(tel.getTarget().getName());
         telephone.setPrefix(tel.getPrefix());
 
         return telephone;
